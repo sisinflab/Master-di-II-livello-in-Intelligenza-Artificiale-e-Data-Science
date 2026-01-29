@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Master di II livello in Intelligenza Artificiale e Data Science | A.A. 2025–2026</title>
+  <meta name="description" content="Master di II livello in Intelligenza Artificiale e Data Science (A.A. 2025–2026). Formula weekend, 60 CFU, 1500 ore. Candidature entro il 27/02/2026 ore 23:59." />
+  <meta name="theme-color" content="#ffffff" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --text:#eaf0ff;
+      --muted:#b9c7f3;
+      --brand:#3b82f6;
+      --brand2:#22c55e;
+      --border: rgba(255,255,255,.12);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius2: 28px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(59,130,246,.35), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.20), transparent 55%),
+        radial-gradient(800px 500px at 50% 110%, rgba(245,158,11,.15), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* ========= HEADER chiaro con loghi da URL (stile masterdatascienceuniba) ========= */
+    .nav{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid rgba(15,23,42,.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner{
+      display: grid;
+      grid-template-columns: auto 1fr auto; /* logo | menu | logo */
+      align-items: center;
+      gap: 16px;
+      padding: 10px 0;
+    }
+
+    .logo-left, .logo-right{
+      display:flex;
+      align-items:center;
+    }
+
+    .header-logo{
+      height: 42px;
+      width: auto;
+      display:block;
+      object-fit: contain;
+    }
+
+    .nav-links{
+      display:flex;
+      justify-content:center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color: rgba(11,18,32,.75);
+      font-weight: 900;
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover{
+      color: #0b1220;
+      background: rgba(11,18,32,.06);
+      border-color: rgba(11,18,32,.10);
+    }
+
+    @media (max-width: 820px){
+      .nav-inner{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 10px;
+      }
+      .header-logo{ height: 36px; }
+    }
+
+    /* ========= HERO / UI ========= */
+    .hero{padding:54px 0 26px}
+    .hero-grid{display:grid; grid-template-columns: 1.25fr .75fr; gap:22px; align-items:stretch}
+    @media (max-width: 940px){ .hero-grid{grid-template-columns:1fr} }
+
+    .h1{
+      font-size: clamp(30px, 3.4vw, 48px);
+      line-height:1.08; margin:0 0 14px;
+      letter-spacing:-.5px;
+    }
+    .sub{margin:0 0 18px; color:var(--muted); font-size: clamp(15px, 1.35vw, 18px)}
+
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 22px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:999px;
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      color:var(--muted); font-weight:800; font-size:13px;
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background: var(--brand)}
+
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid var(--border);
+      text-decoration:none; font-weight:900;
+      background: rgba(255,255,255,.06);
+      box-shadow: var(--shadow);
+    }
+    .btn.primary{background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(59,130,246,.55)); border-color: rgba(59,130,246,.45)}
+    .btn.secondary{background: rgba(255,255,255,.06)}
+    .btn:hover{transform: translateY(-1px)}
+    .btn:active{transform: translateY(0)}
+
+    .card{
+      background: rgba(15,26,46,.78);
+      border: 1px solid var(--border);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .side-card{display:flex; flex-direction:column; gap:14px; height:100%}
+    .mini{
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .mini strong{display:block; margin-bottom:6px}
+
+    .kpi-grid{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    @media (max-width: 520px){ .kpi-grid{grid-template-columns:1fr} }
+    .kpi{
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+    }
+    .kpi .v{font-size:22px; font-weight:900; letter-spacing:-.3px}
+    .kpi .l{color:var(--muted); font-weight:800; font-size:13px}
+
+    .section{padding: 26px 0}
+    .section h2{
+      margin:0 0 10px;
+      font-size: clamp(20px, 2.2vw, 28px);
+      letter-spacing:-.3px;
+    }
+    .section p{margin:0; color:var(--muted)}
+
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px}
+    @media (max-width: 920px){ .grid-3{grid-template-columns:1fr} }
+    .feature h3{margin:0 0 8px; font-size:16px}
+    .feature p{margin:0; color:var(--muted); font-weight:700}
+
+    .table-wrap{overflow:auto; margin-top:14px; border-radius: 18px; border:1px solid var(--border)}
+    table{width:100%; border-collapse:collapse; min-width: 760px; background: rgba(255,255,255,.03)}
+    th, td{padding:12px 12px; text-align:left; border-bottom:1px solid rgba(255,255,255,.08); vertical-align:top}
+    th{position:sticky; top:0; background: rgba(11,18,32,.92); backdrop-filter: blur(8px); font-size:12px; text-transform:uppercase; letter-spacing:.6px; color: var(--muted)}
+    td{font-weight:750}
+
+    .callout{
+      margin-top:14px;
+      padding:14px; border-radius:18px;
+      border:1px solid rgba(245,158,11,.35);
+      background: rgba(245,158,11,.10);
+      color: var(--text);
+      font-weight:800;
+    }
+    .callout b{color:#ffe7b3}
+
+    .steps{display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-top:14px}
+    @media (max-width: 920px){ .steps{grid-template-columns:1fr} }
+    .step{padding:16px; border-radius:18px; border:1px solid var(--border); background: rgba(255,255,255,.04)}
+    .step .n{
+      width:28px; height:28px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center;
+      background: rgba(59,130,246,.25); border:1px solid rgba(59,130,246,.45);
+      font-weight:900; margin-right:10px
+    }
+    .step h3{margin:0 0 8px; font-size:15px}
+    .step p{margin:0; color:var(--muted); font-weight:750}
+
+    .footer{padding: 28px 0 60px; color: var(--muted)}
+    .footer .fine{display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between; padding-top:14px; border-top: 1px solid var(--border); margin-top:14px}
+    .hr{height:1px; background: rgba(255,255,255,.10); margin:18px 0}
+
+    .toast{
+      position: fixed; right: 16px; bottom: 16px; z-index: 80;
+      background: rgba(15,26,46,.92);
+      border:1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow);
+      max-width: 360px;
+      display:none;
+    }
+    .toast strong{display:block; margin-bottom:4px}
+    .toast button{
+      margin-top:10px; width:100%;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      padding:10px 12px;
+      border-radius: 12px;
+      font-weight:900;
+      cursor:pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======= HEADER (loghi da URL, senza file locali) ======= -->
+  <header class="nav" aria-label="Navigazione principale">
+    <div class="container">
+      <div class="nav-inner">
+
+        <!-- LOGO UNIBA (da URL) -->
+        <div class="logo-left">
+          <a href="#top" aria-label="Torna in cima">
+            <img class="header-logo"
+                 src="https://www.uniba.it/it/siba/uniba-logo/logo-uniba-per-re.svg/@@images/367d00dd-ef23-4fc5-a79c-79a2d1042a25.svg"
+                 alt="Università degli Studi di Bari Aldo Moro"
+                 loading="lazy"
+                 referrerpolicy="no-referrer">
+          </a>
+        </div>
+
+        <!-- MENU (centro) -->
+        <nav class="nav-links" aria-label="Sezioni">
+          <a href="#perche">Perché</a>
+          <a href="#programma">Programma</a>
+          <a href="#frequenza">Frequenza</a>
+          <a href="#ammissione">Ammissione</a>
+          <a href="#costi">Costi</a>
+          <a href="#contatti">Contatti</a>
+          <a href="https://www.poliba.it/it/amministrazione-e-servizi/albo/master-di-ii-livello-intelligenza-artificiale-e-data-science-bando"
+             target="_blank" rel="noopener">Bando</a>
+        </nav>
+
+        <!-- LOGO POLIBA (da URL) -->
+        <div class="logo-right">
+          <a href="#top" aria-label="Torna in cima">
+            <img class="header-logo"
+                 src="https://www.unidformazione.com/wp-content/uploads/2018/05/poliba-politecnico-di-bari.png"
+                 alt="Politecnico di Bari"
+                 loading="lazy"
+                 referrerpolicy="no-referrer">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <h1 class="h1">Master di II livello in <span style="color: #9cc3ff">Intelligenza Artificiale</span> e <span style="color:#b7f7cf">Data Science</span></h1>
+            <p class="sub">
+              Un percorso specialistico (A.A. 2025–2026) per formare figure professionali capaci di progettare e applicare modelli di IA e Data Science,
+              con competenze anche <b>manageriali, economiche e giuridiche</b>.
+            </p>
+
+            <div class="pill-row" role="list" aria-label="Punti chiave">
+              <span class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> 12 mesi · 60 CFU · 1500 ore</span>
+              <span class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> Formula weekend (ven/sab)</span>
+              <span class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> Lingua: Italiano</span>
+              <span class="pill" role="listitem"><span class="dot" aria-hidden="true"></span> Stage + prova finale</span>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn primary"
+                 href="https://www.poliba.it/it/amministrazione-e-servizi/albo/master-di-ii-livello-intelligenza-artificiale-e-data-science-bando"
+                 target="_blank" rel="noopener"
+                 aria-label="Apri il bando ufficiale e candidati (si apre in una nuova scheda)">
+                <span aria-hidden="true">📄</span> Bando ufficiale (candidati)
+              </a>
+              <a class="btn secondary" href="#ammissione" aria-label="Vai alla sezione ammissione">
+                <span aria-hidden="true">✅</span> Requisiti &amp; selezione
+              </a>
+              <a class="btn secondary" href="#programma" aria-label="Vai al programma didattico">
+                <span aria-hidden="true">📚</span> Scopri il programma
+              </a>
+              <a class="btn secondary" href="#contatti" aria-label="Vai ai contatti">
+                <span aria-hidden="true">✉️</span> Richiedi info
+              </a>
+            </div>
+
+            <div class="callout" role="note" aria-label="Scadenza candidature">
+              <b>Scadenza candidatura:</b> entro le <b>23:59 del 27/02/2026</b> (iscrizione online + pagamento tassa concorso).
+            </div>
+          </div>
+
+          <aside class="card side-card" aria-label="Riepilogo rapido">
+            <div class="mini">
+              <strong>Posti disponibili</strong>
+              <span style="color:var(--muted); font-weight:800">Numero chiuso: attivazione con <b>min 15</b>, massimo <b>50</b> iscritti.</span>
+            </div>
+
+            <div class="kpi-grid" aria-label="Indicatori">
+              <div class="kpi">
+                <div class="v">80%</div>
+                <div class="l">Frequenza minima obbligatoria</div>
+              </div>
+              <div class="kpi">
+                <div class="v">€ 2.500</div>
+                <div class="l">Quota di iscrizione (2 rate)</div>
+              </div>
+              <div class="kpi">
+                <div class="v">€ 30</div>
+                <div class="l">Tassa di concorso</div>
+              </div>
+              <div class="kpi">
+                <div class="v">PA110</div>
+                <div class="l">Riduzione 50% per PA (se applicabile)</div>
+              </div>
+            </div>
+
+            <div class="mini">
+              <strong>Struttura</strong>
+              <div style="color:var(--muted); font-weight:800">
+                Moduli tecnici (DL/GenAI, NLP, BI, Statistica, Visual Analytics) + aspetti legali (tutela del dato) + use case, stage e seminari.
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="perche" class="section">
+      <div class="container">
+        <h2>Perché questo Master</h2>
+        <p>
+          Forma professionisti in grado di lavorare “all’incrocio” tra informatica e data science, con attenzione a contesto giuridico, manageriale ed economico,
+          e con forte orientamento a casi d’uso e progetto finale.
+        </p>
+
+        <div class="grid-3" role="list" aria-label="Vantaggi">
+          <div class="feature card" role="listitem">
+            <h3>Competenze tecniche solide</h3>
+            <p>Dal data management al deep learning e AI generativa, fino a NLP, ricerca e personalizzazione.</p>
+          </div>
+          <div class="feature card" role="listitem">
+            <h3>Approccio pratico</h3>
+            <p>Use case, linee guida operative, stage (12 CFU) e prova finale su progetto.</p>
+          </div>
+          <div class="feature card" role="listitem">
+            <h3>Visione completa</h3>
+            <p>Include anche tutela/proprietà del dato e aspetti di governance e organizzazione.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programma" class="section">
+      <div class="container">
+        <h2>Programma didattico</h2>
+        <p>Struttura modulare con 60 CFU complessivi (1500 ore totali), inclusi seminari, stage e prova finale.</p>
+
+        <div class="table-wrap" role="region" aria-label="Tabella moduli del master" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <th>Modulo</th>
+                <th>CFU</th>
+                <th>Ore</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>A0 – Allineamento</td><td>4</td><td>110</td></tr>
+              <tr><td>A1 – Strumenti e Risorse per IA e DS</td><td>2,0</td><td>49</td></tr>
+              <tr><td>A2 – Data Management e Business Intelligence</td><td>4,9</td><td>122</td></tr>
+              <tr><td>A3 – Analisi Statistica dei Dati</td><td>3,8</td><td>95</td></tr>
+              <tr><td>A4 – Visual Analytics</td><td>4,3</td><td>110</td></tr>
+              <tr><td>A5 – Deep Learning e AI Generativa</td><td>6,3</td><td>159</td></tr>
+              <tr><td>A6 – NLP, Ricerca e Personalizzazione</td><td>4,8</td><td>120</td></tr>
+              <tr><td>A7 – Proprietà e tutela del dato</td><td>1,8</td><td>44</td></tr>
+              <tr><td>A8 – Practicing AI and Data Science (Use cases &amp; Guidelines)</td><td>11,1</td><td>266</td></tr>
+              <tr><td><b>Stage</b></td><td><b>12</b></td><td><b>300</b></td></tr>
+              <tr><td>Prova finale</td><td>0,4</td><td>10</td></tr>
+              <tr><td>Attività seminariale</td><td>4,6</td><td>115</td></tr>
+              <tr><td><b>TOTALE</b></td><td><b>60</b></td><td><b>1500</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout" role="note">
+          Le verifiche dell’apprendimento sono previste <b>generalmente al termine di ogni modulo</b>;
+          per conseguire il titolo è richiesta la <b>frequenza minima dell’80%</b> del monte ore.
+        </div>
+      </div>
+    </section>
+
+    <section id="frequenza" class="section">
+      <div class="container">
+        <h2>Frequenza e organizzazione</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3 style="margin:0 0 8px">Formula weekend</h3>
+            <p style="margin:0; color:var(--muted); font-weight:800">
+              Didattica frontale in presenza nel fine settimana:
+              <b>venerdì 14:00–18:00</b> e <b>sabato 9:00–13:00 / 14:00–18:00</b>.
+              Possibili sessioni a distanza in caso di esigenze didattiche o disposizioni.
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 8px">Durata</h3>
+            <p style="margin:0; color:var(--muted); font-weight:800">
+              Percorso annuale di <b>12 mesi</b>, per un impegno complessivo di <b>1500 ore</b> tra lezioni e studio individuale.
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 8px">Calendario</h3>
+            <p style="margin:0; color:var(--muted); font-weight:800">
+              Il calendario didattico viene comunicato agli ammessi con successiva notifica.
+              Non è ammessa la sospensione della frequenza.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ammissione" class="section">
+      <div class="container">
+        <h2>Ammissione: requisiti, selezione e scadenze</h2>
+        <p>
+          Accesso con laurea magistrale/specialistica (o vecchio ordinamento) o titolo estero equivalente.
+          È possibile candidarsi anche se si consegue il titolo entro il <b>31/01/2026</b>.
+        </p>
+
+        <div class="steps" aria-label="Passaggi per candidarsi">
+          <div class="step">
+            <div><span class="n">1</span><h3 style="display:inline-block">Registrazione e domanda online</h3></div>
+            <p>Registrati su <b>Esse3</b> e iscriviti al concorso “Master di II livello in Intelligenza Artificiale e Data Science”, caricando i documenti richiesti.</p>
+          </div>
+          <div class="step">
+            <div><span class="n">2</span><h3 style="display:inline-block">Pagamento tassa concorso</h3></div>
+            <p>Versa la <b>tassa di concorso di € 30,00</b> entro le <b>23:59 del 27/02/2026</b> tramite PagoPA (area “Pagamenti” di Esse3).</p>
+          </div>
+          <div class="step">
+            <div><span class="n">3</span><h3 style="display:inline-block">Selezione</h3></div>
+            <p>Valutazione CV/titoli/esperienze + colloquio e/o test motivazionale. Punteggio massimo <b>50</b> (20 curriculum, 30 colloquio); superamento con almeno <b>20</b>.</p>
+          </div>
+          <div class="step">
+            <div><span class="n">4</span><h3 style="display:inline-block">Graduatoria e immatricolazione</h3></div>
+            <p>Graduatoria pubblicata sui canali istituzionali. Gli ammessi perfezionano l’iscrizione entro il termine comunicato (poi eventuale scorrimento).</p>
+          </div>
+        </div>
+
+        <div class="callout" role="note">
+          🔗 <b>Bando ufficiale e candidatura:</b>
+          <a href="https://www.poliba.it/it/amministrazione-e-servizi/albo/master-di-ii-livello-intelligenza-artificiale-e-data-science-bando"
+             target="_blank" rel="noopener" style="color:#ffe7b3; text-decoration:underline">
+            apri la pagina POLIBA
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="costi" class="section">
+      <div class="container">
+        <h2>Costi e agevolazioni</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3 style="margin:0 0 8px">Quota di iscrizione</h3>
+            <p style="margin:0; color:var(--muted); font-weight:800">
+              <b>€ 2.500,00</b> totali: <b>€ 1.250,00</b> all’immatricolazione + <b>€ 1.250,00</b> come seconda rata (fatturata entro l’ultima sessione di esame).
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 8px">PA 110 e lode</h3>
+            <p style="margin:0; color:var(--muted); font-weight:800">
+              Per il personale della Pubblica Amministrazione che aderisce al protocollo: <b>riduzione del 50%</b> (quota <b>€ 1.250,00</b> + imposta di bollo <b>€ 16,00</b>, secondo le indicazioni dell’avviso).
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 8px">Borse / sponsorizzazioni</h3>
+            <p style="margin:0; color:var(--muted); font-weight:800">
+              Eventuali borse/premi possono essere attivati in presenza di finanziamenti. Possibile anche sponsor (es. datore di lavoro) con autorizzazione e formalizzazione.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti" class="section">
+      <div class="container">
+        <h2>Contatti</h2>
+        <p>Per informazioni sulla procedura concorsuale e sull’organizzazione didattica.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3 style="margin:0 0 8px">Segreteria / Procedura</h3>
+            <p style="margin:0; color:var(--muted); font-weight:800">
+              Email: <a href="mailto:post-lauream@poliba.it"><b>post-lauream@poliba.it</b></a>
+            </p>
+            <div class="hr"></div>
+            <p style="margin:0; color:var(--muted); font-weight:800">Nel bando è indicata come email unica per richieste sulla procedura concorsuale.</p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 8px">Coordinamento scientifico</h3>
+            <p style="margin:0; color:var(--muted); font-weight:800">
+              Prof. Tommaso Di Noia: <a href="mailto:tommaso.dinoia@poliba.it"><b>tommaso.dinoia@poliba.it</b></a><br/>
+              Prof. Fedelucio Narducci: <a href="mailto:fedelucio.narducci@poliba.it"><b>fedelucio.narducci@poliba.it</b></a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 8px">Link diretto al bando</h3>
+            <p style="margin:0 0 10px; color:var(--muted); font-weight:800">
+              Apri la pagina ufficiale POLIBA per scaricare il bando e candidarti.
+            </p>
+            <a class="btn secondary"
+               href="https://www.poliba.it/it/amministrazione-e-servizi/albo/master-di-ii-livello-intelligenza-artificiale-e-data-science-bando"
+               target="_blank" rel="noopener">
+              <span aria-hidden="true">📄</span> Apri il bando ufficiale
+            </a>
+
+            <div class="hr"></div>
+
+            <p style="margin:0 0 10px; color:var(--muted); font-weight:800">
+              Oppure copia la scadenza e impostati un promemoria nel calendario.
+            </p>
+            <a class="btn secondary" href="#" id="copy-deadline">
+              <span aria-hidden="true">📅</span> Copia scadenza (27/02/2026 23:59)
+            </a>
+            <p style="margin-top:10px; color:var(--muted); font-weight:800; font-size:12px">
+              Suggerimento: incolla la data nel tuo calendario con titolo “Scadenza candidatura Master IA &amp; DS”.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card" style="display:flex; gap:14px; align-items:center; justify-content:space-between; flex-wrap:wrap">
+          <div>
+            <h2 style="margin:0 0 6px">Pronto a candidarti?</h2>
+            <p style="margin:0; color:var(--muted); font-weight:800">Apri il bando ufficiale e completa la domanda online entro la scadenza.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn primary"
+               href="https://www.poliba.it/it/amministrazione-e-servizi/albo/master-di-ii-livello-intelligenza-artificiale-e-data-science-bando"
+               target="_blank" rel="noopener">
+              <span aria-hidden="true">📄</span> Vai al bando
+            </a>
+            <a class="btn secondary" href="#programma"><span aria-hidden="true">🔎</span> Rivedi i moduli</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="fine">
+          <div>
+            <b>Master IA &amp; Data Science</b> · A.A. 2025–2026<br/>
+            <span style="font-size:12px">Landing informativa con link al bando ufficiale.</span>
+          </div>
+          <div style="font-size:12px">Accessibilità: contrasto elevato · mobile-friendly · navigazione a sezioni</div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <strong id="toast-title">Copiato!</strong>
+      <div id="toast-msg" style="color:var(--muted); font-weight:800">Testo copiato negli appunti.</div>
+      <button type="button" id="toast-close">OK</button>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('copy-deadline');
+      const toast = document.getElementById('toast');
+      const tTitle = document.getElementById('toast-title');
+      const tMsg = document.getElementById('toast-msg');
+      const close = document.getElementById('toast-close');
+
+      function showToast(title, msg){
+        tTitle.textContent = title;
+        tMsg.textContent = msg;
+        toast.style.display = 'block';
+      }
+      function hideToast(){ toast.style.display = 'none'; }
+      close.addEventListener('click', hideToast);
+
+      if (btn) {
+        btn.addEventListener('click', async (e) => {
+          e.preventDefault();
+          const text = "Scadenza candidatura Master IA & Data Science: 27/02/2026 ore 23:59";
+          try{
+            await navigator.clipboard.writeText(text);
+            showToast("Copiato!", "Scadenza copiata negli appunti.");
+          }catch(err){
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            showToast("Copiato!", "Scadenza copiata (fallback).");
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
