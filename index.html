@@ -37,7 +37,7 @@
     a{color:inherit}
     .container{max-width:var(--max); margin:0 auto; padding:0 18px}
 
-    /* ========= HEADER chiaro con loghi da URL ========= */
+    /* ========= HEADER chiaro con loghi ========= */
     .nav{
       position: sticky;
       top: 0;
@@ -69,10 +69,10 @@
 
     /* Dimensione dei loghi */
     .header-logo--poliba{
-      height: 60px;
+      height: 60px; /* logo grande a sinistra */
     }
     .header-logo--uniba{
-      height: 42px;
+      height: 42px; /* logo a destra */
     }
 
     .nav-links{
@@ -245,14 +245,14 @@
     <div class="container">
       <div class="nav-inner">
 
-        <!-- LOGO POLIBA - SINISTRA -->
+        <!-- LOGO IMMAGINE GRANDE - SINISTRA (FILE LOCALE) -->
+        <!-- Metti il file qui: assets/logo.png nel tuo repo GitHub -->
         <div class="logo-left">
           <a href="#top" aria-label="Torna in cima">
             <img class="header-logo header-logo--poliba"
-                 src="https://www.unidformazione.com/wp-content/uploads/2018/05/poliba-politecnico-di-bari.png"
-                 alt="Politecnico di Bari"
-                 loading="lazy"
-                 referrerpolicy="no-referrer">
+                 src="assets/logo.png"
+                 alt="Loghi Politecnico di Bari e Università degli Studi di Bari Aldo Moro"
+                 loading="lazy">
           </a>
         </div>
 
@@ -268,7 +268,7 @@
              target="_blank" rel="noopener">Bando</a>
         </nav>
 
-        <!-- LOGO UNIBA - DESTRA -->
+        <!-- LOGO UNIBA - DESTRA (URL) -->
         <div class="logo-right">
           <a href="#top" aria-label="Torna in cima">
             <img class="header-logo header-logo--uniba"
