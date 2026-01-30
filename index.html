@@ -208,6 +208,69 @@
     .step h3{margin:0 0 8px; font-size:15px}
     .step p{margin:0; color:var(--muted); font-weight:750}
 
+    /* ========= TEAM SECTION ========= */
+    .team-grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-top:14px}
+    .team-member{
+      padding:18px; 
+      border-radius:18px; 
+      border:1px solid var(--border); 
+      background: rgba(255,255,255,.04);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .team-member-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .team-member-info{
+      flex: 1;
+    }
+    .team-member h3{
+      margin:0 0 6px; 
+      font-size:17px;
+      line-height: 1.3;
+    }
+    .team-member .role{
+      color:var(--brand); 
+      font-weight:800; 
+      font-size:12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      display: block;
+    }
+    .team-member .affiliation{
+      color:var(--muted); 
+      font-weight:750; 
+      font-size:13px;
+      line-height: 1.4;
+    }
+    .linkedin-link{
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+    .linkedin-link:hover{
+      background: rgba(59,130,246,.2);
+      border-color: rgba(59,130,246,.4);
+      transform: translateY(-2px);
+    }
+    .linkedin-link img{
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+
     .footer{padding: 28px 0 60px; color: var(--muted)}
     .footer .fine{display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between; padding-top:14px; border-top: 1px solid var(--border); margin-top:14px}
     .hr{height:1px; background: rgba(255,255,255,.10); margin:18px 0}
@@ -233,6 +296,19 @@
       font-weight:900;
       cursor:pointer;
     }
+      
+      #team .team-member-info {
+        text-align: center;
+      }
+      #team .team-member-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      #team .linkedin-link {
+        margin-top: 10px;
+      }
   </style>
 </head>
 
@@ -261,6 +337,7 @@
           <a href="#ammissione">Ammissione</a>
           <a href="#costi">Costi</a>
           <a href="#contatti">Contatti</a>
+          <a href="#team">Team</a>
           <a href="https://www.poliba.it/it/amministrazione-e-servizi/albo/master-di-ii-livello-intelligenza-artificiale-e-data-science-bando"
              target="_blank" rel="noopener">Bando</a>
         </nav>
@@ -350,8 +427,8 @@
       <div class="container">
         <h2>Perché questo Master</h2>
         <p>
-          Forma professionisti in grado di lavorare “all’incrocio” tra informatica e data science, con attenzione a contesto giuridico, manageriale ed economico,
-          e con forte orientamento a casi d’uso e progetto finale.
+          Forma professionisti in grado di lavorare "all'incrocio" tra informatica e data science, con attenzione a contesto giuridico, manageriale ed economico,
+          e con forte orientamento a casi d'uso e progetto finale.
         </p>
 
         <div class="grid-3" role="list" aria-label="Vantaggi">
@@ -404,8 +481,8 @@
         </div>
 
         <div class="callout" role="note">
-          Le verifiche dell’apprendimento sono previste <b>generalmente al termine di ogni modulo</b>;
-          per conseguire il titolo è richiesta la <b>frequenza minima dell’80%</b> del monte ore.
+          Le verifiche dell'apprendimento sono previste <b>generalmente al termine di ogni modulo</b>;
+          per conseguire il titolo è richiesta la <b>frequenza minima dell'80%</b> del monte ore.
         </div>
       </div>
     </section>
@@ -450,11 +527,11 @@
         <div class="steps" aria-label="Passaggi per candidarsi">
           <div class="step">
             <div><span class="n">1</span><h3 style="display:inline-block">Registrazione e domanda online</h3></div>
-            <p>Registrati su <b>Esse3</b> e iscriviti al concorso “Master di II livello in Intelligenza Artificiale e Data Science”, caricando i documenti richiesti.</p>
+            <p>Registrati su <b>Esse3</b> e iscriviti al concorso "Master di II livello in Intelligenza Artificiale e Data Science", caricando i documenti richiesti.</p>
           </div>
           <div class="step">
             <div><span class="n">2</span><h3 style="display:inline-block">Pagamento tassa concorso</h3></div>
-            <p>Versa la <b>tassa di concorso di € 30,00</b> entro le <b>23:59 del 27/02/2026</b> tramite PagoPA (area “Pagamenti” di Esse3).</p>
+            <p>Versa la <b>tassa di concorso di € 30,00</b> entro le <b>23:59 del 27/02/2026</b> tramite PagoPA (area "Pagamenti" di Esse3).</p>
           </div>
           <div class="step">
             <div><span class="n">3</span><h3 style="display:inline-block">Selezione</h3></div>
@@ -462,7 +539,7 @@
           </div>
           <div class="step">
             <div><span class="n">4</span><h3 style="display:inline-block">Graduatoria e immatricolazione</h3></div>
-            <p>Graduatoria pubblicata sui canali istituzionali. Gli ammessi perfezionano l’iscrizione entro il termine comunicato (poi eventuale scorrimento).</p>
+            <p>Graduatoria pubblicata sui canali istituzionali. Gli ammessi perfezionano l'iscrizione entro il termine comunicato (poi eventuale scorrimento).</p>
           </div>
         </div>
 
@@ -483,13 +560,13 @@
           <div class="card">
             <h3 style="margin:0 0 8px">Quota di iscrizione</h3>
             <p style="margin:0; color:var(--muted); font-weight:800">
-              <b>€ 2.500,00</b> totali: <b>€ 1.250,00</b> all’immatricolazione + <b>€ 1.250,00</b> come seconda rata (fatturata entro l’ultima sessione di esame).
+              <b>€ 2.500,00</b> totali: <b>€ 1.250,00</b> all'immatricolazione + <b>€ 1.250,00</b> come seconda rata (fatturata entro l'ultima sessione di esame).
             </p>
           </div>
           <div class="card">
             <h3 style="margin:0 0 8px">PA 110 e lode</h3>
             <p style="margin:0; color:var(--muted); font-weight:800">
-              Per il personale della Pubblica Amministrazione che aderisce al protocollo: <b>riduzione del 50%</b> (quota <b>€ 1.250,00</b> + imposta di bollo <b>€ 16,00</b>, secondo le indicazioni dell’avviso).
+              Per il personale della Pubblica Amministrazione che aderisce al protocollo: <b>riduzione del 50%</b> (quota <b>€ 1.250,00</b> + imposta di bollo <b>€ 16,00</b>, secondo le indicazioni dell'avviso).
             </p>
           </div>
           <div class="card">
@@ -505,7 +582,7 @@
     <section id="contatti" class="section">
       <div class="container">
         <h2>Contatti</h2>
-        <p>Per informazioni sulla procedura concorsuale e sull’organizzazione didattica.</p>
+        <p>Per informazioni sulla procedura concorsuale e sull'organizzazione didattica.</p>
 
         <div class="grid-3">
           <div class="card">
@@ -545,8 +622,138 @@
               <span aria-hidden="true">📅</span> Copia scadenza (27/02/2026 23:59)
             </a>
             <p style="margin-top:10px; color:var(--muted); font-weight:800; font-size:12px">
-              Suggerimento: incolla la data nel tuo calendario con titolo “Scadenza candidatura Master IA &amp; DS”.
+              Suggerimento: incolla la data nel tuo calendario con titolo "Scadenza candidatura Master IA &amp; DS".
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section">
+      <div class="container">
+        <h2>Comitato Tecnico Scientifico</h2>
+        <p>Il team di docenti e professionisti che guida il Master.</p>
+
+        <div class="team-grid">
+          <!-- Tommaso Di Noia -->
+          <div class="team-member">
+            <div class="team-member-header">
+              <div class="team-member-info">
+                <span class="role">Coordinatore del Master</span>
+                <h3>Tommaso Di Noia</h3>
+                <div class="affiliation">Professore Ordinario<br/>Politecnico di Bari</div>
+              </div>
+              <a href="https://www.linkedin.com/in/tommasodinoia/" 
+                 target="_blank" 
+                 rel="noopener"
+                 class="linkedin-link"
+                 aria-label="Profilo LinkedIn di Tommaso Di Noia">
+                <img src="assets/linkedin_logo.png" alt="LinkedIn" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Fedelucio Narducci -->
+          <div class="team-member">
+            <div class="team-member-header">
+              <div class="team-member-info">
+                <span class="role">Vice-Coordinatore del Master</span>
+                <h3>Fedelucio Narducci</h3>
+                <div class="affiliation">Professore Ordinario<br/>Politecnico di Bari</div>
+              </div>
+              <a href="https://www.linkedin.com/in/fedelucio-narducci-612a0425/" 
+                 target="_blank" 
+                 rel="noopener"
+                 class="linkedin-link"
+                 aria-label="Profilo LinkedIn di Fedelucio Narducci">
+                <img src="assets/linkedin_logo.png" alt="LinkedIn" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Michele Ruta -->
+          <div class="team-member">
+            <div class="team-member-header">
+              <div class="team-member-info">
+                <h3>Michele Ruta</h3>
+                <div class="affiliation">Professore Ordinario<br/>Politecnico di Bari</div>
+              </div>
+              <a href="https://www.linkedin.com/in/michele-ruta-1bb7985/" 
+                 target="_blank" 
+                 rel="noopener"
+                 class="linkedin-link"
+                 aria-label="Profilo LinkedIn di Michele Ruta">
+                <img src="assets/linkedin_logo.png" alt="LinkedIn" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Pierpaolo Basile -->
+          <div class="team-member">
+            <div class="team-member-header">
+              <div class="team-member-info">
+                <h3>Pierpaolo Basile</h3>
+                <div class="affiliation">Professore Associato<br/>Università degli Studi di Bari</div>
+              </div>
+              <a href="https://www.linkedin.com/in/pierpaolobasile/" 
+                 target="_blank" 
+                 rel="noopener"
+                 class="linkedin-link"
+                 aria-label="Profilo LinkedIn di Pierpaolo Basile">
+                <img src="assets/linkedin_logo.png" alt="LinkedIn" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Marco De Gemmis -->
+          <div class="team-member">
+            <div class="team-member-header">
+              <div class="team-member-info">
+                <h3>Marco De Gemmis</h3>
+                <div class="affiliation">Professore Associato<br/>Università degli Studi di Bari</div>
+              </div>
+		<a href="https://www.linkedin.com/in/marco-de-gemmis-3a83417a/" 
+                 target="_blank" 
+                 rel="noopener"
+                 class="linkedin-link"
+                 aria-label="Profilo LinkedIn di Pierpaolo Basile">
+                <img src="assets/linkedin_logo.png" alt="LinkedIn" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Giovanni Semeraro -->
+          <div class="team-member">
+            <div class="team-member-header">
+              <div class="team-member-info">
+                <h3>Giovanni Semeraro</h3>
+                <div class="affiliation">Professore Ordinario<br/>Università degli Studi di Bari</div>
+              </div>
+              <a href="https://www.linkedin.com/in/gianni-semeraro-056416/" 
+                 target="_blank" 
+                 rel="noopener"
+                 class="linkedin-link"
+                 aria-label="Profilo LinkedIn di Giovanni Semeraro">
+                <img src="assets/linkedin_logo.png" alt="LinkedIn" loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Francesco Moretti -->
+          <div class="team-member">
+            <div class="team-member-header">
+              <div class="team-member-info">
+                <h3>Francesco Moretti</h3>
+                <div class="affiliation">Deputy CEO e CEO International Region<br/>Fincons Group</div>
+              </div>
+              <a href="https://www.linkedin.com/in/francesco-moretti-3a82516/" 
+                 target="_blank" 
+                 rel="noopener"
+                 class="linkedin-link"
+                 aria-label="Profilo LinkedIn di Francesco Moretti">
+                <img src="assets/linkedin_logo.png" alt="LinkedIn" loading="lazy">
+              </a>
+            </div>
           </div>
         </div>
       </div>
