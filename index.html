@@ -37,7 +37,7 @@
     a{color:inherit}
     .container{max-width:var(--max); margin:0 auto; padding:0 18px}
 
-    /* ========= HEADER chiaro con loghi ========= */
+    /* ========= HEADER chiaro (SOLO logo.png) ========= */
     .nav{
       position: sticky;
       top: 0;
@@ -47,32 +47,29 @@
       backdrop-filter: blur(10px);
     }
 
+    /* ora SOLO 2 colonne: logo | menu */
     .nav-inner{
       display: grid;
-      grid-template-columns: auto 1fr auto; /* logo | menu | logo */
+      grid-template-columns: auto 1fr;
       align-items: center;
       gap: 16px;
       padding: 10px 0;
     }
 
-    .logo-left, .logo-right{
+    .logo-left{
       display:flex;
       align-items:center;
     }
 
     .header-logo{
-      height: 42px;
       width: auto;
       display:block;
       object-fit: contain;
     }
 
-    /* Dimensione dei loghi */
-    .header-logo--poliba{
-      height: 60px; /* logo grande a sinistra */
-    }
-    .header-logo--uniba{
-      height: 42px; /* logo a destra */
+    /* grandezza logo in header */
+    .header-logo--main{
+      height: 60px;
     }
 
     .nav-links{
@@ -104,8 +101,8 @@
         justify-items: center;
         gap: 10px;
       }
-      .header-logo--poliba{ height: 50px; }
-      .header-logo--uniba{ height: 35px; }
+      .header-logo--main{ height: 50px; }
+      .nav-links{ justify-content:center; }
     }
 
     /* ========= HERO / UI ========= */
@@ -240,16 +237,16 @@
 </head>
 
 <body>
-  <!-- ======= HEADER ======= -->
+  <!-- ======= HEADER (SOLO assets/logo.png) ======= -->
   <header class="nav" aria-label="Navigazione principale">
     <div class="container">
       <div class="nav-inner">
 
-        <!-- LOGO IMMAGINE GRANDE - SINISTRA (FILE LOCALE) -->
+        <!-- LOGO UNICO - SINISTRA (FILE LOCALE) -->
         <!-- Metti il file qui: assets/logo.png nel tuo repo GitHub -->
         <div class="logo-left">
           <a href="#top" aria-label="Torna in cima">
-            <img class="header-logo header-logo--poliba"
+            <img class="header-logo header-logo--main"
                  src="assets/logo.png"
                  alt="Loghi Politecnico di Bari e Università degli Studi di Bari Aldo Moro"
                  loading="lazy">
@@ -267,17 +264,6 @@
           <a href="https://www.poliba.it/it/amministrazione-e-servizi/albo/master-di-ii-livello-intelligenza-artificiale-e-data-science-bando"
              target="_blank" rel="noopener">Bando</a>
         </nav>
-
-        <!-- LOGO UNIBA - DESTRA (URL) -->
-        <div class="logo-right">
-          <a href="#top" aria-label="Torna in cima">
-            <img class="header-logo header-logo--uniba"
-                 src="https://www.uniba.it/it/siba/uniba-logo/logo-uniba-per-re.svg/@@images/367d00dd-ef23-4fc5-a79c-79a2d1042a25.svg"
-                 alt="Università degli Studi di Bari Aldo Moro"
-                 loading="lazy"
-                 referrerpolicy="no-referrer">
-          </a>
-        </div>
 
       </div>
     </div>
